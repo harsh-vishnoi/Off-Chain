@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="./mystyle.css">
+    <title>Transaction Smart Contract </title>
+  </head>
+
+  <style>
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 25%;
+    }
+
+    button {
+      padding: 10px;
+      margin: 5px;
+      width: 25%;
+    }
+  </style>
+
+  <body>
+
+    <center><h2>Transaction Platform</h2></center>
+    <br><br>
+
+    <center>
+      <Text id="nonce"></Text><br><br>
+      <Text id="add"></Text><br><br>
+      <Text id="amount"></Text><br><br>
+      <Text id="info"></Text><br><br>
+      <Text id="err"></Text>
+    </center>
+
+    <div id="StartContract">
+      <center>
+        <br><input id="Amount_Escrow" type="number" placeholder="Escrow">
+        <br><input id="Duration" type="number" placeholder="Duration">
+        <br><button type="button" onclick="App.startContract()">Create Contract</button>
+      </center><br><br>
+    </div>
+
+    <!-- style="display:none" -->
+    <div id="SendEthers" style="display:none">
+      <center>
+        <br><input id="SendMoney" type="number" placeholder="Enter ethers to send .....">
+        <br><button type="button" onclick="App.sendEthers()">Send Ethers</button>
+        <Text id="sign"></Text>
+        <br><Text>This will be entirely off-chain i.e through payment channels</Text>
+      </center><br><br>
+    </div>
+
+    <div id="JoinContract">
+      <center>
+        <br><input id="ContractAddress" type="text" placeholder="Enter contract add to join .....">
+        <br><button type="button" onclick="App.joinContract()">Join Contract</button>
+      </center><br><br>
+    </div>
+
+    <!-- style="display:none" -->
+    <div id="Recover" >
+      <center>
+        <br><input id="Value" type="number" placeholder="Enter amount value.....">
+          <br><input id="Nonce" type="number" placeholder="Enter nonce value.....">
+        <br><input id="Signature" type="text" placeholder="Enter Signature value.....">
+        <br><button type="button" onclick="App.getSender()">Close Channel</button>
+      </center>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
