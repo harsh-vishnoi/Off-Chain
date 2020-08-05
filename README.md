@@ -1,7 +1,8 @@
-# E-Voting-Blockchain
+# Off Chain -Blockchain
 
-This Projects aims at solving virtual voting issues. Whole virtual voting is run on ethereum blockchain tracking all executed transactions for maintaining transparency
-and authenticity.
+This Projects aims at escrowing ethers. Whole system is run on ethereum blockchain tracking all executed transactions for maintaining transparency and authenticity.
+
+Sender can pay ethers off-Chain and sign the transanction. That signature will be verified on recipient's end. If in any case ethers get locked in the contract and recipient is not closing the channel then sender can claim TimeOut and if that the case than ethers will be send back to sender. Recipient has to claim payment to get ethers.
 
 # Pre-Requisite
 
@@ -11,7 +12,9 @@ and authenticity.
 
 # Interface
 
-![Screenshot](WebAppIntro.png)
+![Screenshot](Main.png)
+![Screenshot](Recipient.png)
+![Screenshot](Sender.png)
 
 # How to run this repository.
 
